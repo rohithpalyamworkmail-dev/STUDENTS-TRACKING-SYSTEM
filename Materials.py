@@ -95,8 +95,6 @@ def main_layout():
                                 st.info("📄 PDF Viewer")
                                 pdf_viewer(
                                     input=pdf_bytes,
-                                    width=700,
-                                    height=600,
                                     key=f"pdf_viewer_{selected_material.replace(' ', '_')}"
                                 )
                                 
