@@ -1,0 +1,9 @@
+streamlit
+streamlit-extras
+streamlit-pdf-viewer
+streamlit-option-menu
+pymongo
+plotly
+pandas
+numpy
+matplotlib
