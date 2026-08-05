@@ -1,0 +1,38 @@
+import streamlit as st
+from streamlit_option_menu import option_menu
+from mongodb import *  # Uncomment this if you have a local mongodb.py file
+from courses import courses_ui_main
+from materials import main1
+from tasks import main2
+
+def main():
+    # Optional: Configure the page layout
+    st.set_page_config(page_title="Dashboard", layout="wide")
+
+    with st.sidebar:
+        # Call the imported library function directly
+        selected_option = option_menu(
+            menu_title="Choose the option",
+            options=["Courses", "Materials", "Tasks", "Ad Profile"],
+            icons=["book", "pencil", "star", "google"],
+            menu_icon="settings",
+            default_index=0
+        )
+
+    # Render content based on the selected option
+    if selected_option == "Courses":
+        courses_ui_main()
+        
+    elif selected_option == "Materials":
+        main1()
+        
+    elif selected_option == "Tasks":
+        main2()
+        
+    elif selected_option == "Ad Profile":
+        st.header("👤 Ad Profile")
+        st.write("Here you can manage your profile settings.")
+        # pass
+
+if __name__ == "__main__":
+    main()
