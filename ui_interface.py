@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from mongodb import *  # Uncomment this if you have a local mongodb.py file
+import mongodb
 from courses import courses_ui_main
 from materials import main1
 from tasks import main2
