@@ -4,7 +4,7 @@ import streamlit as st
 @st.cache_resource
 def get_mongo_client():
     """Get MongoDB client with caching for better performance"""
-    return MongoClient(st.secrets["mongoKey"])
+    return MongoClient("mongodb+srv://rohith_palyam:rohith_palyam@cluster0.9q8c1if.mongodb.net/?appName=cluster0")
 
 # Only initialize if not already set
 if "collection" not in st.session_state:
