@@ -6,7 +6,7 @@ from pymongo import MongoClient
 if "collection" not in st.session_state:
     try:
         # Get connection string from secrets
-        mongo_uri = st.secrets["mongoKey"]
+        mongo_uri = "mongodb+srv://rohith_palyam:rohith_palyam@cluster0.9q8c1if.mongodb.net/?appName=cluster0"
         # Initialize MongoDB client
         client = MongoClient(mongo_uri)
         st.session_state["client"] = client
